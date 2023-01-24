@@ -91,12 +91,13 @@
                     <!-- IMG-SHOWCASE -->
                     <div class="img__showcase">
                         <div class="img-showcase--showcase">
-                            <img class="img-showcase__active-img" src="img/Sneakers-1.jpg" alt="Fall Limited Edition Sneakers" width="445" height="445" srcset="img/sneakers-1.jpg 1x, img/sneakers-1@2x.jpg 2x">
+                            <button class="img-showcase__lightbox-toggle js-lightbox-toggler" type="button" aria-label="Open image gallery"></button>
+                            <img class="img-showcase__active-img img-showcase__active-img--lightbox" src="img/Sneakers-1.jpg" alt="Fall Limited Edition Sneakers" width="445" height="445" srcset="img/sneakers-1.jpg 1x, img/sneakers-1@2x.jpg 2x">
                         </div>
                         
                         <ul class="img-showcase__thumbnails">
                             <li class="img-showcase__thumbnail img-showcase__thumbnail--active">
-                                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button" aria-label="Image 1" data-img-showcase-big="img/sneakers-1.jpg" data-img-showcase-retina="img/sneakers-1@2x.jpg">
+                                <button class="img-showcase__thumbnail-button js-img-showcase__thumbnail-button" type="button" aria-label="Image 1" data-img-showcase-big="img/sneakers-1.jpg" data-img-showcase-retina=" img/sneakers-1-thumbnail@2x.jpg">
                                     <img class="img-showcase__thumbnail-img" src="img/sneakers-1-thumbnail.jpg" alt="Sneakers-1" width="88" height="88" srcset="img/sneakers-1-thumbnail.jpg 1x, img/sneakers-1-thumbnail@2x.jpg 2x">
                                 </button>
                             </li>
@@ -124,13 +125,88 @@
                 
                 <!-- PRODUCT-PAGE-INFO -->
                 <div class="product-page__info">
-                    <!-- <h2>Sneaker Company</h2>  -->
-                    <h3></h3>
+                    <div class="product-info">
+                        <div class="product-info__manufacturer">Sneaker Company</div> 
+                        <h1 class="product-info__title">Fall Limited Edition Sneakers</h1>
+                        <p class="product-info__description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                        <div class="product-info__price-wrapper">
+                            <b class="product-info__price">$125.00</b>
+                            <span class="badge">50%</span>
+                        </div>    
+                        <del class="product-info__old-price">$250.00</del>   
+                        <div class="product-info__cart-actions">
+                            <div class="product-info__quantity-wrapper">
+                                <button class="product-info__quantity-button js-product-quantity-decrement-button" type="button" aria-label="Remove 1">-</button>
+                                <div class="product-info__quantity">0</div>
+                                <button class="product-info__quantity-button js-product-quantity-increment-button" type="button" aria-label="add 1">+</button>
+                            </div>
+                            <button class="button button--wide" type="button">
+                                <span class="button__inner">
+                                    <span class="button__prepend">
+                                        <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="20" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M3.863 3.641h17.062c.583 0 1.01.55.87 1.114l-1.822 7.283a.896.896 0 0 1-.817.677l-14.321.842c.256.598.849 1.01 1.53 1.01h10.008a2.72 2.72 0 0 1 2.717 2.716A2.72 2.72 0 0 1 16.373 20c-1.878 0-3.197-1.872-2.555-3.642H8.913C9.556 18.13 8.233 20 6.358 20 4.1 20 2.83 17.385 4.22 15.611c-.77-.61-1.218-1.508-1.29-2.336L1.95 2.366v.001c.072.796.169 1.876-.051-.575H.896A.896.896 0 0 1 .896 0h1.82c.465 0 .852.354.894.816l.253 2.825Zm1.57 13.642a.926.926 0 0 0 1.85 0 .926.926 0 0 0-1.85 0Zm10.94.925a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm-11.78-6.432 13.801-.811 1.383-5.531H4.024l.57 6.342Z" clip-rule="evenodd"/></svg>
+                                    </span>
+                                    <span class="button__text">Add to cart</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     
+    <!-- LIGHTBOX -->
+    <div class="lightbox">
+        <div class="lightbox__inner">
+            <button class="lightbox__close js-lightbox-close" type="button" aria-label="Close lightbox"> 
+                <svg class="lightbox__close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M20 2.857 17.143 0 10 7.143 2.857 0 0 2.857 7.143 10 0 17.143 2.857 20 10 12.857 17.143 20 20 17.143 12.857 10 20 2.857Z" clip-rule="evenodd"/></svg>
+            </button>
+            <!-- IMG-SHOWCASE -->
+            <div class="img__showcase img-showcase--lightbox"> 
+                <div class="img-showcase--showcase">
+                    <!-- IMG-SHOWCASE-CONTROLS -->
+                    <button class="img-showcase__control img-showcase__control--prev js-lightbox-control-prev" type="button" aria-label="Previous">
+                        <span class="img-showcase__control-inner">
+                            <svg class="img-showcase__control-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20" fill="none"><path stroke="currentColor" stroke-width="3" d="m11 2-8 8 8 8"/></svg>
+                        </span>
+                    </button>
+                    <button class="img-showcase__control img-showcase__control--next js-lightbox-control-next" type="button" aria-label="Next">
+                        <span class="img-showcase__control-inner">
+                            <svg class="img-showcase__control-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="20" viewBox="0 0 13 20" fill="none"><path stroke="currentColor" stroke-width="3" d="m2 2 8 8-8 8"/></svg>
+                        </span>
+                    </button>
+                    
+                    <img class="img-showcase__active-img" src="img/Sneakers-1.jpg" alt="Fall Limited Edition Sneakers" width="445" height="445" srcset="img/sneakers-1.jpg 1x, img/sneakers-1@2x.jpg 2x">
+                </div>
+                
+                <ul class="img-showcase__thumbnails">
+                    <li class="img-showcase__thumbnail img-showcase__thumbnail--active">
+                        <button class="img-showcase__thumbnail-button js-img-lightbox__thumbnail-button" type="button" aria-label="Image 1" data-img-showcase-big="img/sneakers-1.jpg" data-img-showcase-retina=" img/sneakers-1-thumbnail@2x.jpg">
+                            <img class="img-showcase__thumbnail-img" src="img/sneakers-1-thumbnail.jpg" alt="Sneakers-1" width="88" height="88" srcset="img/sneakers-1-thumbnail.jpg 1x, img/sneakers-1-thumbnail@2x.jpg 2x">
+                        </button>
+                    </li>
+                    
+                    <li class="img-showcase__thumbnail">
+                        <button class="img-showcase__thumbnail-button js-img-lightbox__thumbnail-button" type="button" aria-label="Image 2" data-img-showcase-big="img/sneakers-2.jpg" data-img-showcase-retina="img/sneakers-2@2x.jpg">
+                            <img class="img-showcase__thumbnail-img" src="img/sneakers-2-thumbnail.jpg" alt="Sneakers-2" width="88" height="88" srcset="img/sneakers-2-thumbnail.jpg 1x, img/sneakers-2-thumbnail@2x.jpg 2x">
+                        </button>
+                    </li>
+                    
+                    <li class="img-showcase__thumbnail">
+                        <button class="img-showcase__thumbnail-button js-img-lightbox__thumbnail-button" type="button" aria-label="Image 3" data-img-showcase-big="img/sneakers-3.jpg" data-img-showcase-retina="img/sneakers-3@2x.jpg">
+                            <img class="img-showcase__thumbnail-img" src="img/sneakers-3-thumbnail.jpg" alt="Sneakers-3" width="88" height="88" srcset="img/sneakers-3-thumbnail.jpg 1x, img/sneakers-3-thumbnail@2x.jpg 2x">
+                        </button>
+                    </li>
+                    
+                    <li class="img-showcase__thumbnail">
+                        <button class="img-showcase__thumbnail-button js-img-lightbox__thumbnail-button" type="button" aria-label="Image 4" data-img-showcase-big="img/sneakers-4.jpg" data-img-showcase-retina="img/sneakers-4@2x.jpg">
+                            <img class="img-showcase__thumbnail-img" src="img/sneakers-4-thumbnail.jpg" alt="Sneakers-4" width="88" height="88" srcset="img/sneakers-4-thumbnail.jpg 1x, img/sneakers-4-thumbnail@2x.jpg 2x">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
     <script src="js/main.js"></script>
 </body>
